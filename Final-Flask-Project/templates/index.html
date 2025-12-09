@@ -1,0 +1,30 @@
+<!--
+Connor Overbo,
+2nd web page that displays the affirmation and cat image together
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Catfurmations</title>
+      {{ bootstrap.load_css() }}
+  </head>
+<body>
+    <div class="container mb-4">  
+      <div class="card mt-4">
+        <h1 class="text-center">{{fn}}'s Catfurmation for {{day}}</h1>
+          <center>
+            <img src="{{ url_for('static', filename='cat.jpg') }}" width="400">
+            <p style="font-size: 20px;">
+                {{ affirmation }}
+            </p>
+          </center>
+        <div class="card-footer">
+          <a href="{{ url_for('main') }}" class="card-link">Back to start</a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
