@@ -15,6 +15,7 @@ this uses a different api as the other had numbers and comments.
 import requests
 import random as rand
 import os
+from flask import current_app
 
 def get_affirmation():
     try:
@@ -31,13 +32,13 @@ def get_cat_image():
     data = r.json()
     results = data[0]["url"]
 
-    filepath = os.path.join('static', 'cat.jpg')
+    filepath = os.path.join(current_app.root_path, 'static', 'cat.jpg')
     img = requests.get(results)
 
     with open(filepath, 'wb') as f:
         f.write(img.content)
     
-    return f"{results}"
+    return "cat.jpg"
 
 
 #TEST

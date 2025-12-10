@@ -14,7 +14,7 @@ and the "from API2..." line below needs to be changed to "API" to reference the 
 from flask import Flask, render_template
 import requests, json
 from pprint import pprint
-from API import get_affirmation, get_cat_image
+from API2 import get_affirmation, get_cat_image
 
 app = Flask(__name__)
 
