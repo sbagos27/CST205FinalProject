@@ -12,6 +12,7 @@ as a string then print in the HTML
 import requests
 import random as rand
 import os
+from flask import current_app
 
 CAT_CODES = [
     100,101,102,200,201,202,204,206,207,
@@ -32,9 +33,9 @@ def get_affirmation():
     
 def get_cat_image():
     code = rand.choice(CAT_CODES)
-    return f"https://http.cat/{code}"
+    cat_url = f"https://http.cat/{code}"
 
-    filepath = os.path.join('static', 'cat.jpg')
+    filepath = os.path.join(current_app.root_path,'static', 'cat.jpg')
     img = requests.get(cat_url)
 
     with open(filepath, 'wb') as f:

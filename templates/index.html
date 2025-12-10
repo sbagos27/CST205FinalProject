@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cat Affirmation</title>
+</head>
+
+<body style="text-align:center;">
+
+    <h1>Your Daily Catfurmations! :></h1>
+
+    <p style="font-size:22px;">{{ affirmation }}</p>
+
+    <img src="{{ url_for('static', filename=cat_image) }}" width="400">
+
+    <br><br>
+
+    <form method="get" action="/affirmation">
+        <button type="submit">Refresh</button>
+    </form>
+
+</body>
+</html>
