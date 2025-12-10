@@ -2,6 +2,13 @@
 Senen Bagos, 
 This will be our minimal outline to start off 
 this code provides michael jackson songs in an extremely simple html
+
+Connor Overbo,
+Altered to make the calls to get the cat image and affirmation and load the index template so the flask app produces the output.
+This verion that uses a new cat api with simple images uses API2.py, and Index.html to work.
+
+The previous version (api that has less simple images) works as well, and would have to use API.py, index.html, 
+and the "from API2..." line below needs to be changed to "API" to reference the previous file version.
 """
 
 from flask import Flask, render_template
