@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black; /* optional */
+    }
+
+    img.fullscreen {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover; /* fills screen, keeps aspect ratio */
+        display: block;
+    }
+
+    .affirmation {
+        position: absolute;
+        bottom: 120px; 
+        color: white; 
+        font-size: 32px;
+        text-align: center;
+        text-shadow: 2px 2px 8px black;
+        width: 100%;
+    }
+
+    .refresh-btn {
+        position: absolute;
+        bottom: 40px;
+        font-size: 22px;
+        padding: 12px 24px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+
 <body>
 
-<center>
-    <img src="{{ url_for('static', filename='cat.jpg') }}" width="400">
+    <img class="fullscreen" src="{{ url_for('static', filename='cat.jpg') }}">
 
-    <p style="font-size: 20px;">
-        {{ affirmation }}
-    </p>
-</center>
+    <p class="affirmation">{{ affirmation }}</p>
+
+    <button class="refresh-btn" onclick="window.location.reload();">
+        New Cat and Quote!
+    </button>
 
 </body>
 </html>
