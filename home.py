@@ -2,6 +2,7 @@
 Senen Bagos, 
 This will be our minimal outline to start off 
 this code provides michael jackson songs in an extremely simple html
+^ this was the simple base from a previous HW.
 
 Connor Overbo,
 Altered to make the calls to get the cat image and affirmation and load the index template so the flask app produces the output.
@@ -26,11 +27,9 @@ def welcome():
 @app.route('/affirmation')
 def affirmation_page():
     affirmation_txt = get_affirmation()
-    cat_pic = get_cat_image()
+    get_cat_image()
 
-    return render_template("index.html", affirmation=affirmation_txt, cat_image = cat_pic)
-
-
+    return render_template("index.html", affirmation=affirmation_txt)
 
 if __name__ == '__main__':
     app.run(debug=True)

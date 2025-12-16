@@ -1,4 +1,5 @@
 """
+Senen Bagos, 
 cat api: "http.cat" 
 we can use routes like "http.cat/100" and get a cat 
 gotta get cat jpg
@@ -6,6 +7,8 @@ gotta get cat jpg
 affirmation api: "www.affirmations.dev"
 this literally just spits out a random affirmation that we need to pull from the json, store
 as a string then print in the HTML
+
+This was the initial API to get things going.
 
 Connor Overbo,
 Altered get_cat_image so the return worked like the test and could save the file for use in index.html
